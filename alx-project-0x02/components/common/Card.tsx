@@ -1,4 +1,4 @@
-
+import React from 'react';
 const Card: React.FC<CardProps> = ({title, content}) => {
   return (
     <div className="bg-white shadow-md rounded-2xl p-4 max-w-md">
@@ -7,3 +7,4 @@ const Card: React.FC<CardProps> = ({title, content}) => {
     </div>
   );
 };
+export default Card
