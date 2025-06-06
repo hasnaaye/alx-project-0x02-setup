@@ -7,6 +7,9 @@ const sizeClasses = {
     large: "px-6 py-3 text-lg",
   };
 const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+    text,
+  size = "medium",
+  shape = "rounded-md"
   return (
     <button 
       className="px-4 py-2 bg-blue-500 text-white rounded" 
