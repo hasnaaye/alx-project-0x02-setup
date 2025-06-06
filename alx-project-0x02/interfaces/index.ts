@@ -2,4 +2,9 @@ interface CardProps {
   title: string,
   content: string
 }
-export interface CardProps
+export interface CardProps;
+
+interface ButtonProps {
+  
+}
+export interface ButtonProps;
