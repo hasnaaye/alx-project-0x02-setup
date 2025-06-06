@@ -19,3 +19,8 @@ interface PostProps {
 }
 
 export interface PostProps;
+
+interface UserProps{
+  
+}
+export interface UserProps;
