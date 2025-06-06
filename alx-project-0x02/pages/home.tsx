@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div className="p-4">
       <Card title="Welcome" content="This is a simple card component." />
+       <Header />
     </div>
   );
 };
