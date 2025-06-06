@@ -11,3 +11,9 @@ interface ButtonProps {
   
 }
 export interface ButtonProps;
+
+interface PostProps {
+  
+}
+
+export interface PostProps;
