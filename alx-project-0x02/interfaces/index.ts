@@ -1,1 +1,3 @@
-index
+interface CardProps {
+  
+}
