@@ -1,4 +1,6 @@
 import React from 'react';
+import { type CardProps };
+
 const Card: React.FC<CardProps> = ({title, content}) => {
   return (
     <div className="bg-white shadow-md rounded-2xl p-4 max-w-md">
