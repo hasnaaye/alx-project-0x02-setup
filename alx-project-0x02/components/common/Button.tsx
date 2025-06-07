@@ -1,22 +1,26 @@
-import React from 'react';
-import { type ButtonProps } from '@/interfaces';
+interface ButtonProps {
+  buttonLabel: string
+  buttonSize?: string
+  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
+  action?: () => void
+}
 
-const sizeClasses = {
-    small: "px-2 py-1 text-sm",
-    medium: "px-4 py-2 text-base",
-    large: "px-6 py-3 text-lg",
-  };
-const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
-    text,
-  size = "medium",
-  shape = "rounded-md"
+
+const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
+
+  const backgroundColorClass = buttonBackgroundColor ? {
+    red: 'bg-red-500',
+    blue: 'bg-blue-500',
+    orange: 'bg-orange-500',
+    green: 'bg-green-500',
+  }[buttonBackgroundColor] : 'bg-slate-500'
+
+
   return (
-    <button 
-      className="px-4 py-2 bg-blue-500 text-white rounded" 
-      onClick={onClick}>
-      {text}
+    <button onClick={action} className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}>
+      {buttonLabel}
     </button>
-  );
-};
+  )
+}
 
 export default Button;
